@@ -865,6 +865,10 @@ MEDIA
 		grid-template-columns:1fr 1fr;
 		grid-gap:1.5rem;
 	}
+	.contacts{
+		grid-template-columns:repeat(1, auto);
+		grid-gap:1.5rem;
+	}
 }
 
 @media (min-width:767px) {
