@@ -2,23 +2,20 @@
 $(document).ready(function () {
 
 
-
-
-
-
-
-	$('#main-nav').click(function(){
+   if ($(this).width() < 1024) {
+      $('#main-nav').click(function(){
 		$('.nav-mobile').toggleClass('nav-mobile_active');
-		$('.hamburger').toggleClass('is-active');
-		
+		$('.hamburger').toggleClass('is-active');		
 	});
-	
 	$('.nav-mobile a').click(function(){
 		$('.nav-mobile').toggleClass('nav-mobile_active');
 		$('.hamburger').toggleClass('is-active');
 	});
 	
-	
+   };
+
+
+
 	
 	$("[data-fancybox]").fancybox({
 		buttons : [
@@ -26,28 +23,21 @@ $(document).ready(function () {
 			'thumbs',
 			'close'
 		],
-		
-		
-		lang : 'ru',
-    i18n : {
-        'ru' : {
-            CLOSE       : 'Закрыть',
-            NEXT        : 'Следующий',
-            PREV        : 'Предыдущий',
-            ERROR       : 'Запрошенный контент не может быть загружен. <br/> Повторите попытку позже',
-            PLAY_START  : 'Старт слайд-шоу',
-            PLAY_STOP   : 'Пауза слайд-шоу',
-            FULL_SCREEN : 'Полноэкранно',
-            THUMBS      : 'Список миниатюр'
-        },
-        
-    }
 
-		
-		
+		lang : 'ru',
+		i18n : {
+			'ru' : {
+				CLOSE       : 'Закрыть',
+				NEXT        : 'Следующий',
+				PREV        : 'Предыдущий',
+				ERROR       : 'Запрошенный контент не может быть загружен. <br/> Повторите попытку позже',
+				PLAY_START  : 'Старт слайд-шоу',
+				PLAY_STOP   : 'Пауза слайд-шоу',
+				FULL_SCREEN : 'Полноэкранно',
+				THUMBS      : 'Список миниатюр'
+			},
+		}
 	});
-	
-	
 	
 	(function() {
 		[].slice.call(document.querySelectorAll('.tabs')).forEach(function(el) {
@@ -55,26 +45,14 @@ $(document).ready(function () {
 		});
 	})();
 	
-	
-	
 	$(".slowly").on("click", function (event) {
-		//отменяем стандартную обработку нажатия по ссылке
 		event.preventDefault();
-
-		//забираем идентификатор бока с атрибута href
 		var id  = $(this).attr('href'),
-
-		//узнаем высоту от начала страницы до блока на который ссылается якорь
-			top = $(id).offset().top;
-		
-		//анимируем переход на расстояние - top за 1500 мс
+		top = $(id).offset().top;
 		$('body,html').animate({scrollTop: top}, 1500);
 	});
 
-
-
-
-
+	
     "use strict"; // Start of use strict
 
     //  Variables
@@ -157,7 +135,7 @@ $(document).ready(function () {
     
     // Preloader Page
 
-    $(window).load(function () {
+	$(window).load(function () {
         "use strict"; // Start of use strict
         var $preloader = $('#preloader'),
         $spinner = $preloader.find('.spinner');
