@@ -616,7 +616,7 @@ section.portfolio{
 /*Portfolio - image*/
 .img-grid{
 	display: grid;
-	grid-template-columns:repeat(3, auto);
+	grid-template-columns:repeat(4, auto);
 	align-content: space-between;
 	justify-content: space-around;
 }
@@ -633,7 +633,7 @@ section.portfolio{
 	cursor:pointer;
 	background:#fff;
 	position:relative;
-	margin:0 1rem;
+	margin:1rem;
 }
 .boxImg img{
 	width:100%;
