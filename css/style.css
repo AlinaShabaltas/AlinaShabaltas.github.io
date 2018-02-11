@@ -506,6 +506,8 @@ header{
 section.portfolio{
 	background:url('../image/8f3e63d3-working-hours-bg.jpg');
 	color:#fff;
+	background-size: cover;
+	background-position: center center;
 }
 /*tabs*/
 .tabs-style-linemove nav{
