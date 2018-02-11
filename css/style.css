@@ -609,7 +609,6 @@ section.portfolio{
 .tabs nav a:focus{outline: none}
 .content-wrap{position: relative}
 .content-wrap section{
-	display: none;
 	margin: 0 auto;
 	padding: 2rem 0 0 0;
 }
